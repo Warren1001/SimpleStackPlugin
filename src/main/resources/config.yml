@@ -32,7 +32,6 @@ Ground Stacking Checks: true
 Creative Item Dragging: false
 
 simplestack:
-  version: "Version: {VERSION}"
   commands:
     reload:
       success: "The config has been reloaded."
