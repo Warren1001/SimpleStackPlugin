@@ -349,7 +349,7 @@ public class Config {
 	 */
 	public ItemStack getUniqueItem(ItemStack item) {
 		for (ItemStack curItem : uniqueItemList) {
-			if (!curItem.equals(item)) {
+			if (!curItem.isSimilar(item)) {
 				continue;
 			}
 			return curItem;

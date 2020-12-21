@@ -21,10 +21,7 @@ public final class StackUtils {
 	 * @return If items should switch or not
 	 */
 	public static boolean shouldSwitch(Inventory inventory, int slot) {
-        if (inventory instanceof StonecutterInventory && slot == 1) {
-            return false;
-        }
-		return true;
+		return !(inventory instanceof StonecutterInventory) || slot != 1;
 	}
 	
 	/**
