@@ -1,16 +1,9 @@
 package com.mikedeejay2.simplestack.listeners;
 
-import com.mikedeejay2.simplestack.Simplestack;
-import org.bukkit.Material;
-import org.bukkit.entity.Entity;
-import org.bukkit.entity.Item;
+import com.mikedeejay2.simplestack.SimpleStack;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.ItemSpawnEvent;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.scheduler.BukkitRunnable;
-
-import java.util.List;
 
 /**
  * Listens for Item Spawn events. <p>
@@ -18,23 +11,20 @@ import java.util.List;
  *
  * @author Mikedeejay2
  */
-public class ItemSpawnListener implements Listener
-{
-    private final Simplestack plugin;
-
-    public ItemSpawnListener(Simplestack plugin)
-    {
-        this.plugin = plugin;
-    }
-
-    /**
-     *
-     *
-     * @param event The event being activated
-     */
-    @EventHandler
-    public void itemSpawnEvent(ItemSpawnEvent event)
-    {
-
-    }
+public class ItemSpawnListener implements Listener {
+	
+	private final SimpleStack plugin;
+	
+	public ItemSpawnListener(SimpleStack plugin) {
+		this.plugin = plugin;
+	}
+	
+	/**
+	 * @param event The event being activated
+	 */
+	@EventHandler
+	public void itemSpawnEvent(ItemSpawnEvent event) {
+	
+	}
+	
 }

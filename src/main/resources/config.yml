@@ -11,21 +11,6 @@ Item Types:
 Item Amounts:
   Example Item: 64
 
-# Language: The default language for in game text. If the specified language is not supported English will be used.
-# Supported Languages:
-#   * en_us - English
-#   * zh_cn - 简体中文 (Simplified Chinese)
-#   * ko_kr - 한국어 (Korean)
-#   * es_ar - Español (Argentinian Spanish)
-#   * es_cl - Español (Chilean Spanish)
-#   * es_mx - Español (Mexican Spanish)
-#   * es_uy - Español (Uruguayan Spanish)
-#   * es_ve - Español (Venezuelan Spanish)
-#   * de_de - Deutsch (German)
-# Note: Language is also based off of per-player, the language specified in this config only applies
-# to the console or unknown languages.
-Language: en_us
-
 # Default Max Amount: Set the default max amount for ALL items in Minecraft
 # This setting could be dangerous, do proper testing before changing this value.
 Default Max Amount: 64
@@ -45,3 +30,33 @@ Ground Stacking Checks: true
 # inventory will always become a full stack. This is a substitute for middle click dragging
 # since middle click dragging can't be detected through the Spigot API.
 Creative Item Dragging: false
+
+simplestack:
+  version: "Version: {VERSION}"
+  commands:
+    reload:
+      success: "The config has been reloaded."
+    reset:
+      success: "The config has been reset to the default values."
+    setamount:
+      info: "Set the amount of a held item"
+      success: "Amount set successfully."
+      format: "Command format: /simplestack setamount <number>"
+    additem:
+      success: "The held item has been added to the config."
+    removeitem:
+      success: "The held item has been removed from the config."
+  warnings:
+    no_permission: "You do not have permission to use this command."
+    must_be_player: "You must be a player to use this command."
+    number_outside_of_range: "The amount specified for {MAT} is outside of the valid range. Defaulting to 64."
+    invalid_material: "The material {MAT} in the config does not exist."
+    invalid_unique_item: "An item listed in the unique items list could not be loaded."
+    invalid_list_mode: "The list mode {MODE} is not a valid list mode. Defaulting to blacklist mode."
+    invalid_max_amount: "The default max amount specified in the config is outside of the required range (1 - 64)"
+    material_already_exists: "That material already exists in the config."
+    custom_amount_does_not_exist: "A customized amount for that item type does not exist in the config."
+    held_item_required: "You must hold an item to run this command."
+  list_type:
+    blacklist: "Blacklist"
+    whitelist: "Whitelist"
